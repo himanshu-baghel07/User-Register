@@ -48,7 +48,7 @@ const App = () => {
         id="data"
         style={{
           width: "100%",
-          height: "80vh",
+          height: "75vh",
           overflowY: "auto",
           padding: "1%",
         }}

@@ -1,4 +1,4 @@
-import { Button, Container, TextField } from "@mui/material";
+import { Button, Container, Input, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 const Form = ({ handleAddUser }) => {
@@ -33,12 +33,21 @@ const Form = ({ handleAddUser }) => {
       id="form"
       sx={{
         width: "100%",
-        height: "20vh",
+        height: "100%",
         color: "white",
         overflowY: "hidden",
+        paddingBottom: "1%",
       }}
     >
-      <h1>User Register</h1>
+      <Typography
+        sx={{
+          marginBottom: { md: "2%", sm: "5%", xs: "1%" },
+          textAlign: "center",
+          fontSize: { md: " 2.5rem", sm: "2.5rem", xs: "1.5rem" },
+        }}
+      >
+        User Register
+      </Typography>
       <form
         style={{
           display: "flex",
@@ -47,8 +56,8 @@ const Form = ({ handleAddUser }) => {
         }}
         onSubmit={handleSubmit}
       >
-        <TextField
-          label="Name"
+        <Input
+          placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -59,8 +68,8 @@ const Form = ({ handleAddUser }) => {
             borderRadius: "10px",
           }}
         />
-        <TextField
-          label="Email"
+        <Input
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
@@ -73,8 +82,8 @@ const Form = ({ handleAddUser }) => {
           }}
         />
 
-        <TextField
-          label="Phone"
+        <Input
+          placeholder="Phone"
           type="tel"
           value={phone}
           onChange={handlePhoneChange}
